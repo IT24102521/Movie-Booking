@@ -8,11 +8,7 @@
         <version>3.5.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.movie_booking</groupId>
-    <artifactId>MovieBookingSystem</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>MovieBookingSystem</name>
-    <description>MovieBookingSystem</description>
+    <groupId>com.example</groupId><artifactId>SeCrud</artifactId><version>0.0.1-SNAPSHOT</version><name>SeCrud</name><description>SeCrud</description>
     <url/>
     <licenses>
         <license/>
@@ -38,7 +34,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web-services</artifactId>
         </dependency>
-
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
@@ -72,14 +67,13 @@
             <artifactId>spring-boot-starter-tomcat</artifactId>
             <scope>provided</scope>
         </dependency>
-        <!-- JSTL Support -->
+        <!-- For JSTL support keep the implementation only (org.glassfish) -->
         <dependency>
-            <groupId>jakarta.servlet.jsp.jstl</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+            <groupId>org.glassfish.web</groupId>
+            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>3.0.0</version>
         </dependency>
-
-        <!-- For Jakarta EE 9+ (Spring Boot 3.x requires this) -->
+        <!-- For Jakarta EE 9+ servlet API (provided) -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -90,15 +84,13 @@
             <artifactId>jbcrypt</artifactId>
             <version>0.4</version>
         </dependency>
+        <!-- Dependency for javax.validation -->
         <dependency>
-            <groupId>org.glassfish.web</groupId>
-            <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>3.0.0</version>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
         </dependency>
-
-
     </dependencies>
-
     <build>
         <plugins>
             <plugin>
@@ -107,5 +99,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
