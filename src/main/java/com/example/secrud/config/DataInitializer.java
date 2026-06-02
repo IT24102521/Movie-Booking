@@ -3,11 +3,13 @@ package com.example.secrud.config;
 import com.example.secrud.models.AdminModel;
 import com.example.secrud.repos.AdminRepo;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Component
+@Configuration
 public class DataInitializer implements CommandLineRunner, WebMvcConfigurer {
 
     private final AdminRepo adminRepo;
